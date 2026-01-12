@@ -1,23 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AL HAQQ MEDIA BURKINA</title>
+  <meta name="description" content="AL HAQQ MEDIA BURKINA - Diffusion de la connaissance islamique authentique. Audios, vidéos et enseignements islamiques.">
+  <meta name="keywords" content="Islam, Hadith, Audio, Vidéo, Enseignement, Burkina Faso">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" type="image/png">
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; }
-    header { background:#0b6b3a; color:white; padding:20px; text-align:center; }
-    nav { background:#084d2a; padding:10px; text-align:center; }
-    nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
-    section { padding:30px; background:white; margin:20px; border-radius:6px; }
-    h2 { color:#0b6b3a; }
-    footer { background:#333; color:white; text-align:center; padding:15px; }
-    .media { margin-top:15px; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #0b6b3a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    header img.logo {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Navbar */
+    nav {
+      background: #084d2a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #0b6b3a;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #0b6b3a;
+      margin-top: 0;
+    }
+
+    /* Audios and Videos */
+    .media-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .media-item {
+      flex: 1 1 300px;
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .media-item p {
+      margin-top: 10px;
+    }
+
+    /* Formulaire contact */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea, form button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1em;
+    }
+
+    form button {
+      background: #0b6b3a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #084d2a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      nav { flex-direction: column; }
+      .media-list { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
 
 <header>
+  <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="Logo" class="logo">
   <h1>AL HAQQ MEDIA BURKINA</h1>
   <p>Diffusion de la connaissance islamique authentique</p>
 </header>
@@ -38,34 +175,60 @@
 
 <section id="enseignements">
   <h2>Enseignements</h2>
-  <p>Articles et rappels islamiques pour renforcer la foi.</p>
+  <p>Articles et rappels islamiques pour renforcer la foi et la connaissance.</p>
+  <img src="https://images.unsplash.com/photo-1600289548550-3aebbf8e6e39?auto=format&fit=crop&w=800&q=60" alt="Enseignement" style="width:100%; border-radius:6px; margin-top:15px;">
 </section>
 
 <section id="audios">
   <h2>Audios</h2>
-  <div class="media">
-    <p>Prêche audio (exemple)</p>
-    <audio controls>
-      <source src="audio.mp3" type="audio/mpeg">
-      Votre navigateur ne supporte pas l'audio.
-    </audio>
+  <div class="media-list">
+    <div class="media-item">
+      <p>Prêche audio exemple</p>
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'audio.
+      </audio>
+    </div>
+    <div class="media-item">
+      <p>Prêche audio exemple 2</p>
+      <audio controls>
+        <source src="audio2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
   </div>
 </section>
 
 <section id="videos">
   <h2>Vidéos</h2>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  <div class="media-list">
+    <div class="media-item">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+      <p>Conférence exemple</p>
+    </div>
+    <div class="media-item">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+      <p>Conférence exemple 2</p>
+    </div>
+  </div>
 </section>
 
 <section id="annonces">
   <h2>Annonces</h2>
-  <p>Horaires de prières, événements religieux et communiqués.</p>
+  <p>Horaires de prières, événements religieux et communiqués importants.</p>
+  <img src="https://images.unsplash.com/photo-1605475121245-68d007aaabef?auto=format&fit=crop&w=800&q=60" alt="Annonce" style="width:100%; border-radius:6px; margin-top:15px;">
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>Email : contact@alhaqqmediaburkina.com</p>
-  <p>Téléphone : +226 XX XX XX XX</p>
+  <p>Téléphone : +226 71 01 20 67</p>
+
+  <form>
+    <input type="text" name="name" placeholder="Nom complet" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
 </section>
 
 <footer>
