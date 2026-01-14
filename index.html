@@ -2,48 +2,122 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <title>AL HAQQ MEDIA BURKINA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - AL HAQQ MEDIA BURKINA</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {margin:0;font-family:'Roboto',sans-serif;background:#f5f5f5;color:#333;}
-    header {background:#0b6b3a;color:white;text-align:center;padding:30px 20px;position:relative;}
-    header img.logo {width:80px;height:80px;position:absolute;top:15px;left:20px;border-radius:50%;border:2px solid white;}
-    header h1 {margin:0;font-size:2.5em;}
-    header p {margin-top:10px;font-style:italic;}
-    nav {background:#084d2a;display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
-    nav a {color:white;text-decoration:none;margin:10px 15px;font-weight:bold;padding:8px 15px;border-radius:5px;transition:background 0.3s;}
-    nav a:hover {background:#0b6b3a;}
-    section {max-width:1000px;margin:20px auto;background:white;padding:25px;border-radius:8px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-    section h2 {color:#0b6b3a;margin-top:0;}
-    footer {text-align:center;background:#333;color:white;padding:20px;margin-top:20px;}
-    @media(max-width:600px){nav{flex-direction:column;}}
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Roboto', sans-serif; background:#f3f6f4 url('https://www.transparenttextures.com/patterns/arabesque.png'); color:#222;}
+    a {text-decoration:none; color:inherit;}
+
+    header {background: linear-gradient(rgba(6,79,50,0.8), rgba(6,79,50,0.8)), url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53'); background-size:cover; background-position:center; color:white; padding:60px 20px; text-align:center; position:relative;}
+    header h1 {font-size:42px; margin-bottom:10px; animation:fadeInDown 1s;}
+    header p {font-size:20px; animation:fadeInUp 1s;}
+    header .arabic {direction:rtl; font-family:'Amiri', serif; font-size:28px; margin-top:10px; animation:fadeIn 2s;}
+    .bismillah {font-family:'Amiri', serif; font-size:36px; color:#ffd700; animation:glow 3s infinite alternate; text-align:center; margin-top:10px;}
+    @keyframes glow {0%{text-shadow:0 0 5px #ffd700;}100%{text-shadow:0 0 20px #ffd700;}}
+
+    nav {background:#064f32; padding:14px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.2); position:sticky; top:0; z-index:100;}
+    nav a {color:#fff; margin:0 16px; font-weight:bold; letter-spacing:1px; transition:color 0.3s;}
+    nav a:hover {color:#e8f5ee;}
+
+    section {max-width:1000px; margin:30px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08);}
+    h2 {color:#0a7d4f; border-bottom:2px solid #0a7d4f; padding-bottom:5px; margin-bottom:20px;}
+
+    .video-slider {display:flex; overflow-x:auto; scroll-behavior:smooth; gap:20px; padding-bottom:10px;}
+    .video-slider::-webkit-scrollbar {height:8px;}
+    .video-slider::-webkit-scrollbar-thumb {background:#0a7d4f; border-radius:4px;}
+    .video-card {min-width:300px; border-radius:10px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.15); flex-shrink:0; background:white; transition:transform 0.3s; cursor:pointer;}
+    .video-card:hover {transform:scale(1.03);}
+    .video-card video {width:100%; display:block;}
+    .video-card h3 {padding:10px; color:#064f32;}
+
+    .lightbox {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:200;}
+    .lightbox video {max-width:90%; max-height:80%;}
+
+    .contact p {margin:10px 0; font-size:16px;}
+    .contact i {margin-right:8px; color:#0a7d4f;}
+
+    footer {background:#064f32; color:white; text-align:center; padding:20px; margin-top:40px;}
+
+    @keyframes fadeInDown {0%{opacity:0; transform:translateY(-30px);}100%{opacity:1; transform:translateY(0);}}
+    @keyframes fadeInUp {0%{opacity:0; transform:translateY(30px);}100%{opacity:1; transform:translateY(0);}}
+    @keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+
+    @media(max-width:768px){header h1{font-size:32px;} header p{font-size:18px;} .video-card{min-width:250px;}}
   </style>
 </head>
 <body>
+
 <header>
-  <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="Logo" class="logo">
   <h1>AL HAQQ MEDIA BURKINA</h1>
-  <p>Diffusion de la connaissance islamique authentique</p>
+  <p>Plateforme de diffusion des sermons islamiques</p>
+  <p class="arabic">منصة لنشر الخطب والمواعظ الإسلامية</p>
+  <p class="bismillah">بسم الله الرحمن الرحيم</p>
 </header>
 
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="enseignements.html">Enseignements</a>
-  <a href="audios.html">Audios</a>
-  <a href="videos.html">Vidéos</a>
-  <a href="annonces.html">Annonces</a>
-  <a href="contact.html">Contact</a>
+  <a href="#accueil">Accueil</a>
+  <a href="#videos">Vidéos</a>
+  <a href="#apropos">À propos</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section>
-  <h2>Accueil</h2>
-  <p>« Allah est la Vérité, et ce qu'ils invoquent en dehors de Lui est le faux. » (Coran 22:62)</p>
+<section id="accueil">
+  <h2>Bienvenue</h2>
+  <p>AL HAQQ MEDIA BURKINA est une plateforme islamique dédiée à la diffusion de sermons, prêches et rappels islamiques en vidéo, accessibles à tous.</p>
+  <p class="arabic">الحق ميديا بوركينا منصة إسلامية تهدف إلى نشر الخطب والدروس والمواعظ الإسلامية عبر الفيديو لفائدة الجميع.</p>
+</section>
+
+<section id="videos">
+  <h2>Sermons en vidéo</h2>
+  <div class="video-slider">
+    <div class="video-card" onclick="openLightbox('video1.mp4')">
+      <video><source src="video1.mp4" type="video/mp4"></video>
+      <h3>L’importance de la prière</h3>
+    </div>
+    <div class="video-card" onclick="openLightbox('video2.mp4')">
+      <video><source src="video2.mp4" type="video/mp4"></video>
+      <h3>La sincérité dans l’adoration</h3>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <video id="lightbox-video" controls></video>
+</div>
+
+<section id="apropos">
+  <h2>À propos</h2>
+  <p>Ce média œuvre pour la da‘wa authentique, la diffusion du savoir islamique et le rappel bénéfique conformément au Coran et à la Sunna.</p>
+  <p class="arabic">يعمل هذا الإعلام على الدعوة إلى الله ونشر العلم الشرعي والتذكير النافع وفق القرآن والسنة.</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p><i class="fas fa-envelope"></i> Email : contact@alhaqqmediaburkina.com</p>
+  <p><i class="fas fa-phone"></i> Téléphone : +22652066374</p>
+  <p><i class="fas fa-phone"></i> Orange Money : +22654145890</p>
+  <p><i class="fas fa-phone"></i> Moov Money : +22671012067</p>
+  <p><i class="fas fa-map-marker-alt"></i> Adresse : Ouagadougou, Burkina Faso</p>
+  <p><i class="fas fa-globe"></i> Site web : www.alhaqqmediaburkina.com</p>
 </section>
 
 <footer>
-  <p>© 2026 AL HAQQ MEDIA BURKINA - Tous droits réservés</p>
+  <p>© 2026 – AL HAQQ MEDIA BURKINA | Qu’Allah accepte nos œuvres</p>
 </footer>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox-video').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox-video').pause();
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
